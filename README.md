@@ -2,7 +2,7 @@
 My solutions to the daily coding problem email distro
 
 
-#Problems Solved:
+# Problems Solved:
 - 8/4/19 : Given three 32-bit integers x, y, and b, 
 return x if b is 1 and y if b is 0, 
 using only mathematical or bit operations. 
