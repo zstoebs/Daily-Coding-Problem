@@ -13,3 +13,5 @@ write a function to compute the minimum number
 of parentheses to be removed to make the 
 string valid (i.e. each open parenthesis is 
 eventually closed).
+
+- 8/6/19: Given a list of rules, check if the sum of the rules validate. 
