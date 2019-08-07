@@ -1,7 +1,7 @@
-/* main.cpp
+/* Parentheses.h
 * Author: Zach Stoebner
 * Created on: 8-5-2019
-* Descrip: class to count min number of removable parentheses
+* Descrip: declaration of class to count min number of removable parentheses
 */
 // Created by Zachary Stoebner on 2019-08-05.
 //

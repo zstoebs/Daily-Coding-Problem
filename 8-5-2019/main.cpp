@@ -2,7 +2,7 @@
  * main.cpp
  * Author: Zach Stoebner
  * Created on: 8-5-2019
- * Descrip: executable for 8-5-2019 DCP
+ * Descrip: 
  *
  * Given a string of parentheses,
  * write a function to compute the minimum

@@ -1,3 +1,8 @@
+/* Parentheses.cpp
+* Author: Zach Stoebner
+* Created on: 8-5-2019
+* Descrip: definition of class to count min number of removable parentheses
+*/
 //
 // Created by Zachary Stoebner on 2019-08-05.
 //
@@ -8,8 +13,8 @@
 #include <string>
 
 /*
-     * default constructor
-     */
+* default constructor
+*/
 Parentheses::Parentheses() : count(0) {} //nothing left to do
 
 /*
