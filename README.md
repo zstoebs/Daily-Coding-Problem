@@ -35,3 +35,12 @@ for i in range(10):
 
 for f in functions:
     print(f())
+
+- 8/11/19: We're given a hashmap associating each
+courseId key with a list of courseIds values,
+which represents that the prerequisites of
+courseId are courseIds. Return a sorted
+ordering of courses such that we can finish
+all courses.
+
+Return null if there is no such ordering.

@@ -33,3 +33,11 @@ for i in range(10):
 
 for f in functions:
     print(f())
+
+###ADMIN SOLUTION
+functions = []
+for i in range(10):
+    functions.append(lambda i=i: i)
+
+for f in functions:
+    print(f())
