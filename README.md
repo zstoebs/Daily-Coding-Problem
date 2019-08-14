@@ -51,3 +51,9 @@ Given a tree, return the size of the largest tree/subtree that is a BST.
 find the maximum path sum between two nodes.
 The path must go through at least one node,
 and does not need to go through the root.
+
+- 8/14/19: Given a number represented by a list of digits,
+find the next greater permutation of a number,
+ in terms of lexicographic ordering. If there
+ is not greater permutation possible, return
+ the permutation with the lowest value/ordering.
