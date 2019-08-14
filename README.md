@@ -42,5 +42,12 @@ which represents that the prerequisites of
 courseId are courseIds. Return a sorted
 ordering of courses such that we can finish
 all courses.
-
 Return null if there is no such ordering.
+
+- 8/12/19: Given a tree, find the largest tree/subtree that is a BST.
+Given a tree, return the size of the largest tree/subtree that is a BST.
+
+- 8/13/19: Given a binary tree of integers,
+find the maximum path sum between two nodes.
+The path must go through at least one node,
+and does not need to go through the root.

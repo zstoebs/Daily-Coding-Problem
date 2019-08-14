@@ -145,3 +145,57 @@ print(courseOrder(test3))
 test4 = {7:[5,6,4,3,2,1,0],5:[4,3,2,1,0],
 6:[4,3,2,1,0],4:[2,3,1,0],2:[1,0],3:[1],1:[],0:[]}
 print(courseOrder(test4))
+"""
+['CSC100', 'CSC200', 'CSC300']
+None
+[1, 3, 2, 4, 6, 5, 7]
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-1-d609e77cd60b> in <module>
+    145 test4 = {7:[5,6,4,3,2,1,0],5:[4,3,2,1,0],
+    146 6:[4,3,2,1,0],4:[2,3,1,0],2:[1,0],3:[1],1:[],0:[]}
+--> 147 print(courseOrder(test4))
+
+<ipython-input-1-d609e77cd60b> in courseOrder(courseIds)
+     51                     state = True
+     52         for key in to_remove:
+---> 53             keys_left.remove(key)
+     54
+     55     #if all courseIds don't fit into a Hasse diagram, not a poset so invalid
+
+ValueError: list.remove(x): x not in list
+"""
+
+###ADMIN SOLUTION
+def courses_to_take(course_to_prereqs):
+    # Copy list values into a set for faster removal.
+    course_to_prereqs = {c: set(p) for c, p in course_to_prereqs.items()}
+
+    todo = [c for c, p in course_to_prereqs.items() if not p]
+
+    # Used to find courses D which have C as a prerequiste
+    prereq_to_coures = {}
+    for course in course_to_prereqs:
+        for prereq in course_to_prereqs[course]:
+            if prereq not in prereq_to_coures:
+                prereq_to_coures[prereq] = []
+
+            prereq_to_coures[prereq].append(course)
+
+    result = [] # courses we need to take in order
+
+    while todo:
+        prereq = todo.pop()
+        result.append(prereq)
+
+        # Find which courses are now free to take
+
+        for c in prereq_to_coures.get(prereq, []):
+            course_to_prereqs[c].remove(prereq)
+            if not course_to_prereqs[c]:
+                todo.append(c)
+
+    # Cicrcular dependency
+    if len(result) < len(course_to_prereqs):
+        return None
+    return result
