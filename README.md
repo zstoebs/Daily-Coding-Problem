@@ -54,6 +54,9 @@ and does not need to go through the root.
 
 - 8/14/19: Given a number represented by a list of digits,
 find the next greater permutation of a number,
- in terms of lexicographic ordering. If there
- is not greater permutation possible, return
- the permutation with the lowest value/ordering.
+in terms of lexicographic ordering. If there
+is not greater permutation possible, return
+the permutation with the lowest value/ordering.
+
+- 8/15/19: Given a number in the form of a list of digits,
+return all possible permutations.
