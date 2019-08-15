@@ -34,10 +34,9 @@ procedure generate(k : integer, A : array of any):
         end for
     end if
 """
-#permute
+#permute1
 #Note: finds all permutations of a given num
-def permute(number,pivot=0,perms=[]):
-
+def permute1(number,pivot=0,perms=[]):
 
     #helper function to swap
     def swap(number,i1,i2):
@@ -45,19 +44,63 @@ def permute(number,pivot=0,perms=[]):
 
     length = len(number)
     if pivot == length:
-        perms.append(number)
+        perms.append(list(number))
         return perms
     else:
         for i in range(pivot,length):
 
             swap(number,i,pivot)
 
-            perms = permute(number,pivot+1,perms)
+            perms = permute1(number,pivot+1,perms)
 
             swap(number,i,pivot)
 
     return perms
 
-#Having tried a few ways that I can think of and then even trying a proven algo,
-#the permutations don't compute quickly.
-print(permute([1,2,3]))
+def permute2(number,pivot=0,perms=[]):
+    #helper function to swap
+    def swap(number,i1,i2):
+        number[i1],number[i2] = number[i2],number[i1]
+
+    length = len(number)
+    i = pivot
+    while i < length:
+        swap(number,i,pivot)
+        perms = permute2(number,pivot+1,perms)
+        swap(number,i,pivot)
+        i += 1
+    return perms
+
+#Heap's Algorithm
+def Heap(number,k=None,perms=[]):
+
+    if k is None:
+        k = len(number)
+
+    #helper function to swap
+    def swap(number,i1,i2):
+        number[i1],number[i2] = number[i2],number[i1]
+
+    if k == 1:
+        if perms.count(list(number)) == 0:
+            perms.append(list(number))
+        return perms
+    else:
+        perms = Heap(number,k-1,perms)
+
+        for i in range(k):
+
+            if k % 2 == 0:
+                swap(number,i,k-1)
+            else:
+                swap(number,0,k-1)
+
+            perms = Heap(number,k-1,perms)
+    return perms
+
+#these work now
+print(Heap([1,2,3]))
+print(permute1([1,2,3]))
+
+#this one doesn't work
+print(permute2([1,2,3]))
