@@ -63,6 +63,10 @@ def permute2(number,pivot=0,perms=[]):
         number[i1],number[i2] = number[i2],number[i1]
 
     length = len(number)
+    if pivot == length:
+        perms.append(list(number))
+        return perms
+    
     i = pivot
     while i < length:
         swap(number,i,pivot)
@@ -101,6 +105,28 @@ def Heap(number,k=None,perms=[]):
 #these work now
 print(Heap([1,2,3]))
 print(permute1([1,2,3]))
-
-#this one doesn't work
 print(permute2([1,2,3]))
+
+#### ADMIN SOLUTION
+def permute(nums):
+    if (len(nums) == 1):
+            return [nums]
+
+    output = []
+    for l in permute(nums[1:]):
+        for idx in range(len(nums)):
+            output.append(l[:idx] + [nums[0]] + l[idx:])
+    return output
+
+def permute(nums):
+    def helper(nums, index, output):
+        if index == len(nums) - 1:
+            output.append(nums.copy())
+        for i in range(index, len(nums)):
+            nums[index], nums[i] = nums[i], nums[index]
+            helper(nums, index + 1, output)
+            nums[index], nums[i] = nums[i], nums[index]
+
+    output = []
+    helper(nums, 0, output)
+    return output

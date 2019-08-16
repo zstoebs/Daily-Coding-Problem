@@ -60,3 +60,6 @@ the permutation with the lowest value/ordering.
 
 - 8/15/19: Given a number in the form of a list of digits,
 return all possible permutations.
+
+- 8/16/19: Write a map implementation with a get function
+that lets you retrieve the value of a key at a particular time.
