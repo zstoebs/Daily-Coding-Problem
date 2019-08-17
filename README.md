@@ -63,3 +63,6 @@ return all possible permutations.
 
 - 8/16/19: Write a map implementation with a get function
 that lets you retrieve the value of a key at a particular time.
+
+- 8/17/19: Given a 2D board of characters and a word,
+find if the word exists in the grid.
