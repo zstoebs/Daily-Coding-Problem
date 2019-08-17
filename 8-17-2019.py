@@ -71,4 +71,4 @@ board = [
 ]
 print(exists(board, "ABCCED")) #true
 print(exists(board, "SEE")) #true
-print(exists(board, "ABCB")) #true, should be false
+print(exists(board, "ABCB")) #false
