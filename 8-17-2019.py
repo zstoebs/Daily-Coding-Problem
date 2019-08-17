@@ -35,10 +35,10 @@ def exists(board,word):
 
     def helper(row,col,visited=[],word_ind=1):
 
-        if word_ind > len(word)-1:
-            return True
-        elif tuple([row,col]) in visited:
+        if (row,col) in visited:
             return False
+        elif word_ind >= len(word):
+            return True
         else:
             visited.append(tuple([row,col]))
             up = down = left = right = False
