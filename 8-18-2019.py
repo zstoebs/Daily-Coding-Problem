@@ -137,6 +137,55 @@ def hash_sequence(ints):
 
     return count
 
-ints = [100, 4, 200, 1, 3, 2]
+ints = [ 4, 1, 3, 2,100,200]
 print()
 print(hash_sequence(ints))
+
+#my_hash_solution
+#Note: finds longest consecutive sequence via hashing by hand for my own education
+#Complexity: O(9n/2) time + O(n) space --> O(n) total
+def my_hash_solution(ints):
+
+    hash_set = [None for _ in ints] #O(n)
+    set_size = len(hash_set) #O(n)
+
+    def my_hash_func(key,emplace=False,return_hash=False):
+
+        hashed = False
+        step = 0
+        while not hashed:
+            hash = (key//(step+1) + step) % set_size
+            if emplace and hash_set[hash] is None:
+                hash_set[hash] = key
+                hashed = True
+            if return_hash and hash_set[hash] == key:
+                return hash
+            if step > (set_size**2+1): #need a threshold to prevent infinite loop
+                return False
+            else:
+                step += 1
+
+    #mapping to hashes
+    print("Hashing...")
+    for int in ints: #O(n)
+        my_hash_func(int,emplace=True)
+
+    #counting longest sequence
+    print("Finding longest sequence...")
+    count = 0
+    for int in ints: #O(n) + O(n/2) for avg case of while loop
+
+        cur = int+1
+        hash = my_hash_func(cur,return_hash=True)
+        while hash_set[hash] == cur:
+            cur += 1
+            hash = my_hash_func(cur,return_hash=True)
+
+        count = max(count,cur-int)
+
+    return count
+
+### TESTS
+ints = [ 4, 1, 3, 2,100,200]
+print()
+print(my_hash_solution(ints))
