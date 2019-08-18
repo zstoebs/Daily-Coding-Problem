@@ -66,3 +66,7 @@ that lets you retrieve the value of a key at a particular time.
 
 - 8/17/19: Given a 2D board of characters and a word,
 find if the word exists in the grid.
+
+- 8/18/19: Given an unsorted array of integers,
+find the length of the longest consecutive
+elements sequence.
