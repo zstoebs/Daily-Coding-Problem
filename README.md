@@ -70,3 +70,8 @@ find if the word exists in the grid.
 - 8/18/19: Given an unsorted array of integers,
 find the length of the longest consecutive
 elements sequence.
+
+- 8/19/19: You are given a sequence of points and
+the order in which you need to cover the
+points. Give the minimum number of steps
+in which you can achieve it.
