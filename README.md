@@ -75,3 +75,7 @@ elements sequence.
 the order in which you need to cover the
 points. Give the minimum number of steps
 in which you can achieve it.
+
+- 8/20/19: Given an even number (greater than 2),
+return two prime numbers whose sum will
+be equal to the given number.
