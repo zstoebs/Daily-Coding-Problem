@@ -79,3 +79,7 @@ in which you can achieve it.
 - 8/20/19: Given an even number (greater than 2),
 return two prime numbers whose sum will
 be equal to the given number.
+
+- 8/21/19: Given a list of integers and a number K,
+return which contiguous elements of the
+list sum to K.

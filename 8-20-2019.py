@@ -17,6 +17,7 @@ smaller solution.
 
 #goldbach
 #Note: returns two prime numbers that sum to passed number, assumes number > 2
+#Complexity: O(n^2)
 def goldbach(number):
 
     #isPrime
@@ -45,3 +46,20 @@ print(goldbach(4)) #[1,3]
 print(goldbach(40)) #[3,37]
 print(goldbach(100004)) #[1,100003]
 print(goldbach(123468)) #[11,123457]
+
+
+### ADMIN solution
+def primesum(self, n):
+    for i in xrange(2, n):
+        if self.is_prime(i) and self.is_prime(n - i):
+            return i, n - i
+
+def is_prime(self, n):
+    if n < 2:
+        return False
+
+    for i in xrange(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+
+    return True
