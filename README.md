@@ -83,3 +83,7 @@ be equal to the given number.
 - 8/21/19: Given a list of integers and a number K,
 return which contiguous elements of the
 list sum to K.
+
+- 8/22/19: Given a string and a set of characters,
+return the shortest substring containing
+all the characters in the set.
