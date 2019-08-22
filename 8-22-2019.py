@@ -18,14 +18,14 @@ the characters in the set, return null.
 
 #substr_chars
 #Note: returns shortest substring containing all chars in passed set
-#Complexity:
+#Complexity: O(n^2) time + O(n) space
 def substr_chars(string,char_set):
 
     length = len(string)
     cur_sub = None
 
     #finding a starting point
-    for i in range(length):
+    for i in range(length): #n
         if string[i] in char_set:
             to_visit = char_set.copy()
             sub = str(string[i])
@@ -33,13 +33,13 @@ def substr_chars(string,char_set):
 
             #starting point found so continue till end of string
             j = i + 1
-            while j < length:
+            while j < length: #n
                 sub += string[j]
 
                 if string[j] in to_visit:
                     to_visit.remove(string[j])
 
-                #if all chars in substring, return substring
+                #if shortest, make cur candidate
                 if len(to_visit) == 0:
                     if cur_sub is None or len(sub) < len(cur_sub):
                         cur_sub = sub
