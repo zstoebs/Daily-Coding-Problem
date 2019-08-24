@@ -47,7 +47,7 @@ class DoublyLinkedList {
       /**
        * @brief Copy constructor
        */
-      DoublyLinkedList(const DoublyLinkedList& rhs);
+      DoublyLinkedList(const DoublyLinkedList<T>& rhs);
 
       /**
        * @brief Destructor
@@ -57,7 +57,7 @@ class DoublyLinkedList {
       /**
        * @brief Copy assignment operator
        */
-      DoublyLinkedList & operator=(const DoublyLinkedList& rhs);
+      DoublyLinkedList & operator=(const DoublyLinkedList<T>& rhs);
 
       /**
        * @brief Inserts node with data after prior
