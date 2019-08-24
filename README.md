@@ -87,3 +87,6 @@ list sum to K.
 - 8/22/19: Given a string and a set of characters,
 return the shortest substring containing
 all the characters in the set.
+
+- 8/23/19: Determine whether a doubly linked
+list is a palindrome. What if it’s singly linked?
