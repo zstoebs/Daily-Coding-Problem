@@ -93,3 +93,8 @@ list is a palindrome. What if it’s singly linked?
 
 - 8/24/19: Given a function f, and N return a
 debounced f of N milliseconds.
+
+- 8/25/19: Given an integer list where each number
+represents the number of hops you can make,
+determine whether you can reach to the last
+index starting at index 0.
