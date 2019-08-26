@@ -98,3 +98,5 @@ debounced f of N milliseconds.
 represents the number of hops you can make,
 determine whether you can reach to the last
 index starting at index 0.
+
+- 8/26/19: Print the nodes in a binary tree level-wise.
