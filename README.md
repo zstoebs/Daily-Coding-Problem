@@ -100,3 +100,7 @@ determine whether you can reach to the last
 index starting at index 0.
 
 - 8/26/19: Print the nodes in a binary tree level-wise.
+
+- 8/27/19: Given two strings A and B, return whether
+or not A can be shifted some number of
+times to get B.
