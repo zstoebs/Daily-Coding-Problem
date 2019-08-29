@@ -25,3 +25,7 @@ word = 0b10101010
 print(even_odd_bit_swap(word))
 word = 0b11100010
 print(even_odd_bit_swap(word))
+
+### ADMIN SOLUTION
+def swap_bits(x):
+    return (x & 0b10101010) >> 1 | (x & 0b01010101) << 1

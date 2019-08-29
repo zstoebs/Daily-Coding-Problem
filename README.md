@@ -109,3 +109,6 @@ times to get B.
 even and odd bits. The 1st and 2nd bit
 should be swapped, the 3rd and 4th bit
 should be swapped, and so on.
+
+- 8/29/19: Given a binary tree, return all paths
+from the root to leaves.
