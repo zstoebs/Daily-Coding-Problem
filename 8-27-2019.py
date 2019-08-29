@@ -122,3 +122,10 @@ print(better_shiftable(s1,s2)) #False
 s1 = "eaaaa"
 s2 = "aaaae"
 print(better_shiftable(s1,s2)) #True
+
+### ADMIN SOLUTION
+def is_shifted(a, b):
+    if len(a) != len(b):
+        return False
+
+    return b in a + a

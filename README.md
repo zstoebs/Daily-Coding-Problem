@@ -104,3 +104,8 @@ index starting at index 0.
 - 8/27/19: Given two strings A and B, return whether
 or not A can be shifted some number of
 times to get B.
+
+- 8/28/19: Given an unsigned 8-bit integer, swap its
+even and odd bits. The 1st and 2nd bit
+should be swapped, the 3rd and 4th bit
+should be swapped, and so on.
