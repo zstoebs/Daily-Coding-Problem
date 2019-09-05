@@ -23,7 +23,7 @@ for the following cases: "hello/world:here/",
 #Help from: https://stackoverflow.com/questions/4998629/split-string-with-multiple-delimiters-in-python
 #delimiter_split
 #Note: returns reversed string around delimiters
-#Complexity:
+#Complexity: O(n^2) time
 def delimiter_split(string,delimiters):
 
     #saving each split into a dictionary
