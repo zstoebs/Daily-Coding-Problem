@@ -12,3 +12,6 @@ delimiters.
 
 - 9/4/2019: Generate a finite, but an arbitrarily large binary
 tree quickly in O(1).
+
+- 9/6/2019: Given a sorted list of integers,
+          square the elements and give the output in sorted order.
