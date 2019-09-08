@@ -14,4 +14,9 @@ delimiters.
 tree quickly in O(1).
 
 - 9/6/2019: Given a sorted list of integers,
-          square the elements and give the output in sorted order.
+  square the elements and give the output in sorted order.
+
+- 9/7/2019: Given a set of closed intervals,
+  find the smallest set of numbers that covers
+  all the intervals. If there are multiple smallest
+  sets, return any of them.
