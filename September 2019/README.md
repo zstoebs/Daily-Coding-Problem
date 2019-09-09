@@ -20,3 +20,6 @@ tree quickly in O(1).
   find the smallest set of numbers that covers
   all the intervals. If there are multiple smallest
   sets, return any of them.
+
+- 9/9/2019: Given a string which we can delete at most k,
+  return whether you can make a palindrome.
