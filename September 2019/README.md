@@ -23,3 +23,6 @@ tree quickly in O(1).
 
 - 9/9/2019: Given a string which we can delete at most k,
   return whether you can make a palindrome.
+
+- 9/12/2019: Write a function that, given n, returns the number of rounds
+  you'd expect to play until one coin remains.
