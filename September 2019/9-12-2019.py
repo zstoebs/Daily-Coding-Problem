@@ -44,3 +44,8 @@ print(rounds(1)) #1
 print(rounds(30)) #31
 print(rounds(40)) #71
 print(rounds(300)) #371
+
+### ADMIN SOLUTION
+
+def coins(n):
+    return log(n, 2)
