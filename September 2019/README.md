@@ -26,3 +26,12 @@ tree quickly in O(1).
 
 - 9/12/2019: Write a function that, given n, returns the number of rounds
   you'd expect to play until one coin remains.
+
+- 9/13/2019: Given the root of a binary search tree, and a target K,
+          return two nodes in the tree whose sum equals K.
+
+- 9-14-2019:  Write a function that rotates a list by k elements.
+          For example, [1, 2, 3, 4, 5, 6] rotated by two becomes
+          [3, 4, 5, 6, 1, 2]. Try solving this without creating
+          a copy of the list. How many swap or move operations
+          do you need?

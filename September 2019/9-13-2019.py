@@ -23,11 +23,11 @@ class Node(object):
 
 #node_sum
 #Note: returns the value stored in two nodes of a given tree that equal k
-#Complexity:
+#Complexity: O(n^2)
 def node_sum(root,k):
 
     #getting all nodes
-    def get_nodes(root,nodes=list([])):
+    def get_nodes(root,nodes=list([])): #n
 
         left = root.left
         right = root.right
@@ -48,11 +48,11 @@ def node_sum(root,k):
         return nodes
 
     nodes = get_nodes(root)
-    nodes.sort()
+    nodes.sort() #nlogn
     ret = None
     found = False
     length = len(nodes)
-    for i in range(length):
+    for i in range(length): #n^2
         if found:
             break
 
@@ -67,3 +67,25 @@ def node_sum(root,k):
 ### TESTS
 tree = Node(10,Node(5),Node(15,Node(11),Node(15)))
 print(node_sum(tree,20))
+
+### ADMIN SOLUTION
+def two_sum(root, K):
+    for node_one in iter_tree(root):
+        node_two = search(root, K - node_one.val)
+
+        if node_two:
+            return (node_one, node_two)
+
+    return None
+
+
+def search(node, val):
+    if not node:
+        return None
+
+    if node.val == val:
+        return node
+    elif node.val < val:
+        return search(node.right, val)
+    else:
+        return search(node.left, val)
