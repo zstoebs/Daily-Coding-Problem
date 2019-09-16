@@ -38,3 +38,8 @@ tree quickly in O(1).
 
 - 9/15/2019: Given two linked lists in this format, return their sum in
   the same linked list format.
+
+- 9/16/2019: Write a function that prints out all the steps necessary
+to complete the Tower of Hanoi. You should assume that
+the rods are numbered, with the first rod being 1, the
+second (auxiliary) rod being 2, and the last (goal) rod being 3.
