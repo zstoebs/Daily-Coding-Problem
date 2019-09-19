@@ -9,19 +9,25 @@
 
 For example, given k = 2 and the array [5, 2, 4, 0, 1], you should return 3.
 """
+#The trader doesn't have to buy chronologically. If they only have k=1 buys and sells,
+# then they can prioritize whichever margin is most profitable, whether it be later or earlier
 
 #max_profit
 #Note: returns the max profit from k buys and sells
+#Complexity: O(n)
 def max_profit(stocks,k):
 
+    #can't buy and sell if only one stock price
     assert len(stocks) > 1
 
+    #computing price differences
     diffs = list([])
     prev = stocks[0]
     for stock in stocks[1:]:
         diffs.append(stock-prev)
         prev = stock
 
+    #computing profit margins for periods of buy and sell
     i = 0
     margins = list([])
     cur_margin = 0
