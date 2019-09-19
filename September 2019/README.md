@@ -40,6 +40,10 @@ tree quickly in O(1).
   the same linked list format.
 
 - 9/16/2019: Write a function that prints out all the steps necessary
-to complete the Tower of Hanoi. You should assume that
-the rods are numbered, with the first rod being 1, the
-second (auxiliary) rod being 2, and the last (goal) rod being 3.
+  to complete the Tower of Hanoi. You should assume that
+  the rods are numbered, with the first rod being 1, the
+  second (auxiliary) rod being 2, and the last (goal) rod being 3.
+
+- 9/18/2019: Given an array of numbers representing the stock prices of a
+  company in chronological order and an integer k, return the maximum
+  profit you can make from k buys and sells.
