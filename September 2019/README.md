@@ -47,3 +47,10 @@ tree quickly in O(1).
 - 9/18/2019: Given an array of numbers representing the stock prices of a
   company in chronological order and an integer k, return the maximum
   profit you can make from k buys and sells.
+
+- 9/22/2019: Use a more space-efficient data structure, SparseArray, that
+  implements the same interface:
+
+  init(arr, size): initialize with the original large array and size.
+  set(i, val): updates index at i with val.
+  get(i): gets the value at index i.
