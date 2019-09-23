@@ -54,3 +54,5 @@ tree quickly in O(1).
   init(arr, size): initialize with the original large array and size.
   set(i, val): updates index at i with val.
   get(i): gets the value at index i.
+
+- 9/23/2019: Given a binary tree, find a minimum path sum from root to a leaf.
