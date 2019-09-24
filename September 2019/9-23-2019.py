@@ -41,3 +41,19 @@ def min_path_sum(node):
 ### TESTS
 tree = Node(10,Node(5,right=Node(2)),Node(5,right=Node(1,left=Node(-1))))
 print(min_path_sum(tree)) #15
+
+### ADMIN SOLUTION
+def min_sum_path(node):
+    return list(reversed(_min_sum_path(node)))
+
+def _min_sum_path(node):
+    if node:
+        left_list = _min_sum_path(node.left)
+        right_list = _min_sum_path(node.right)
+
+        min_list = min(left_list, right_list, key=lambda lst: sum(node.val for node in lst))
+        min_list.append(node)
+
+        return min_list
+
+    return []

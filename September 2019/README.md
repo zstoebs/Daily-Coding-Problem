@@ -56,3 +56,6 @@ tree quickly in O(1).
   get(i): gets the value at index i.
 
 - 9/23/2019: Given a binary tree, find a minimum path sum from root to a leaf.
+
+- 9/24/2019: Given an N by M matrix consisting only of 1's and 0's,
+  find the largest rectangle containing only 1's and return its area.
