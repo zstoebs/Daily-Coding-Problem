@@ -17,7 +17,7 @@ Return 4.
 
 #rectangle
 #returns the area of the largest rectangle of 1's in an NxM matrix
-#Complexity:
+#Complexity: O(N^2)
 def rectangle(mat=list([])):
     n = len(mat)
     m = len(mat[0])
@@ -26,73 +26,94 @@ def rectangle(mat=list([])):
     #parse_row
     #parses the row and returns a list of the longest consecutive cols
     #Complexity: O(M)
-    def parse_row(row):
-        nonlocal m,mat
+    def parse_row(row=list([])):
+        nonlocal m
 
-        length = 0
-        cols = list([])
-
-        cur_max_length = length
-        cur_cols = cols
+        length = cur_max_length = 0
+        cols = cur_cols = list([])
         equal_length = list([])
 
         broken = False
         for j in range(m):
 
-            if not broken and mat[row][j] == 1:
+            #if continuous chain
+            if not broken and row[j] == 1:
                 length += 1
                 cols.append(j)
-            elif broken and mat[row][j] == 1:
+            #if not a continuous chain
+            elif broken and row[j] == 1:
                 broken = False
                 length += 1
                 cols.append(j)
 
-            if mat[row][j] == 0:
-                if length == cur_max_length:
-                    equal_length.append(cols)
-                elif length > cur_max_length:
-                    cur_max_length = length
-                    cur_cols = cols
+            #when chain breaks
+            if row[j] == 0:
+                #if just coming from chain
+                if not broken:
+                    #add to list of equal length chains
+                    if length != 0 and length == cur_max_length:
+                        equal_length.append(cols)
+                    #if longest so far, set to cur_longest chain
+                    elif length > cur_max_length:
+                        cur_max_length = length
+                        cur_cols = cols
 
-                length = 0
-                cols = list([])
+                    length = 0
+                    cols = list([])
+                broken = True
 
+        #checking for line that ends at end of row
+        if length != 0 and length == cur_max_length:
+            equal_length.append(cols)
+        elif length > cur_max_length:
+            cur_max_length = length
+            cur_cols = cols
+
+        #if the chains that were added to equal length along the way are equiv to longest chain,
+        # add them to the return list of consecutive 1's
         lines = list([cur_cols])
         for mark in equal_length:
+            mark = list([mark])
             if len(mark) == cur_max_length:
-                lines.append(mark)
-
+                lines.append([mark])
         return lines
 
     #find_rect
     #a helper function that takes the row and the list of cols that are 1 on that row
     #Complexity: O(NxM)
     def find_rect(row,lines):
-        nonlocal n,area,mat
+        nonlocal n,area
 
+        #for each consecutive line of equal length
         for line in lines:
             length = len(line)
             cur_area = length
 
+            #for each of the next rows
             i = row+1
             while i < n:
                 valid = True
+                #if there is every a zero in the line that should be equal to initial chain,
+                # it's no longer a rectangle
                 for j in line:
                     if mat[i][j] == 0:
                         valid = False
 
+                #if still valid after checking current row, increment area by length of chain
                 if valid:
                     cur_area += length
                     i += 1
+                #if not valid, move out of while loop
                 else:
                     i = n+1
 
+            #checking with the nonlocal area to set the max area rectangle
             if cur_area > area:
                 area = cur_area
 
-    for i in range(n):
-        ones = parse_row(i)
-        find_rect(i,ones)
+    for i in range(n): #N
+        ones = parse_row(mat[i]) #M
+        find_rect(i,ones) #NxM --> N^2
 
     return area
 
@@ -101,5 +122,4 @@ mat = [[1, 0, 0, 0],
  [1, 0, 1, 1],
  [1, 0, 1, 1],
  [0, 1, 0, 0]]
-print(rectangle(mat)) #3
-#yikes that's one short, need to debug
+print(rectangle(mat)) #4 -- it works; low confidence though
