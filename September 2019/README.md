@@ -59,3 +59,5 @@ tree quickly in O(1).
 
 - 9/24/2019: Given an N by M matrix consisting only of 1's and 0's,
   find the largest rectangle containing only 1's and return its area.
+
+- 9/25/2019: Implement a bit array.
