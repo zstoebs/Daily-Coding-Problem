@@ -61,3 +61,5 @@ tree quickly in O(1).
   find the largest rectangle containing only 1's and return its area.
 
 - 9/25/2019: Implement a bit array.
+
+- 9/26/2019: Find the minimum number of coins required to make n cents.

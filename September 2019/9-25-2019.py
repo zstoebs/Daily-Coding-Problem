@@ -45,4 +45,34 @@ t1 = bit_array(10)
 print(t1)
 t1.set(1,1)
 print(t1.get(1))
-#t1.set(11,2) -- results in an infinite loop on my software but I think that it's Hydrogen or Atom.io
+#t1.set(11,2) -- results in an infinite loop on my machine but I think that it's Hydrogen being unable to handle Python input or Atom.io
+
+### ADMIN SOLUTION
+import math
+
+
+BITS_PER_INT = 32
+
+
+class BitArray(object):
+    def __init__(self, size):
+        self._list = [0] * int(math.ceil(size / float(BITS_PER_INT)))
+        self._size = size
+
+    def get(self, i):
+        if i < 0 or i >= self._size:
+            raise IndexError('Index out of bounds')
+
+        list_idx = i / BITS_PER_INT
+        int_idx = i % BITS_PER_INT
+
+        return (self._list[list_idx] >> int_idx) & 1
+
+    def set(self, i, val):
+        if i < 0 or i >= self._size:
+            raise IndexError('Index out of bounds')
+
+        list_idx = i / BITS_PER_INT
+        int_idx = i % BITS_PER_INT
+
+        self._list[list_idx] ^= (-val ^ self._list[list_idx]) & (1 << int_idx)
