@@ -63,3 +63,7 @@ tree quickly in O(1).
 - 9/25/2019: Implement a bit array.
 
 - 9/26/2019: Find the minimum number of coins required to make n cents.
+
+- 9/27/2019: Given an iterator with methods next() and hasNext(),
+  create a wrapper iterator, PeekableInterface, which also
+  implements peek().
