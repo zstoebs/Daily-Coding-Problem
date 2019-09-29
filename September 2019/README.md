@@ -67,3 +67,7 @@ tree quickly in O(1).
 - 9/27/2019: Given an iterator with methods next() and hasNext(),
   create a wrapper iterator, PeekableInterface, which also
   implements peek().
+
+- 9/28/2019: Given an array of integers in which two elements appear
+  exactly once and all other elements appear exactly twice, find
+  the two elements that appear only once.

@@ -21,7 +21,7 @@ class PeekableInterface(object):
         pass
 """
 """
-I really don't know if this is correct. The difficulty is medium 
+I really don't know if this is correct. The difficulty is medium
 so I'm probs missing something here but alas it's another poorly
 worded, ultra vague DCP.
 """
@@ -38,3 +38,20 @@ class PeekableInterface(object):
 
     def hasNext(self):
         return self.iter.hasNext()
+
+### ADMIN SOLUTION
+class PeekableInterface(object):
+    def __init__(self, iterator):
+        self.iterator = iterator
+        self._next = next(self.iterator)
+
+    def peek(self):
+        return self._next
+
+    def next(self):
+        result = self._next
+        self._next = next(self.iterator)
+        return result
+
+    def hasNext(self):
+        return self._next is not None
