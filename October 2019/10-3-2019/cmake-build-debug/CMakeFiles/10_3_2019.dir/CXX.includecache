@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Zachary/Desktop/Code/Daily Coding Problem/October 2019/10-3-2019/10-3-2019.cpp
+iostream
+-
+LinkedList.h
+/Users/Zachary/Desktop/Code/Daily Coding Problem/October 2019/10-3-2019/LinkedList.h
+
+/Users/Zachary/Desktop/Code/Daily Coding Problem/October 2019/10-3-2019/LinkedList.cpp
+
+/Users/Zachary/Desktop/Code/Daily Coding Problem/October 2019/10-3-2019/LinkedList.h
+cstdint
+-
+stdexcept
+-
+LinkedList.cpp
+/Users/Zachary/Desktop/Code/Daily Coding Problem/October 2019/10-3-2019/LinkedList.cpp
+
