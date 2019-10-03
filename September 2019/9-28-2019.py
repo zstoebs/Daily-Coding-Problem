@@ -13,7 +13,7 @@ Follow-up: Can you do this in linear time and constant space?
 
 #two_once
 #returns a list of ints that only occur once in the array, all others occur twice
-#Complexity:
+#Complexity: O(nlogn) time O(1) space
 def two_once(arr):
 
     count = 0
@@ -39,3 +39,21 @@ print(two_once(arr)) #AssertionError
 
 #for linear time, constant space solution, have to use bits
 #https://www.geeksforgeeks.org/find-the-element-that-appears-once/
+
+
+### ADMIN SOLUTION
+def array_two_elements(arr):
+    xor = 0
+    for num in arr:
+        xor = xor ^ num
+
+    # Get rightmost set bit
+    xor = xor & -xor
+
+    rets = [0, 0]
+    for num in arr:
+        if num & xor:
+            rets[0] = rets[0] ^ num
+        else:
+            rets[1] = rets[1] ^ num
+    return rets

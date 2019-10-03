@@ -71,3 +71,5 @@ tree quickly in O(1).
 - 9/28/2019: Given an array of integers in which two elements appear
   exactly once and all other elements appear exactly twice, find
   the two elements that appear only once.
+
+- 9/29/2019: Implement 3 stacks using a single list.
