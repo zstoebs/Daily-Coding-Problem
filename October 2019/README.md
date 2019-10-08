@@ -5,3 +5,6 @@
 
 - 10/7/2019: Given a list of numbers L, implement a method sum(i, j)
 which returns the sum from the sublist L[i:j] (including i, excluding j).
+
+- 10/8/2019: Given a list of points, a central point, and an integer k,
+find the nearest k points from the central point.
