@@ -11,7 +11,7 @@ the central point (1, 2), and k = 2, return [(0, 0), (3, 1)].
 # Can compute the distances of each of the points from the central point,
 # then sort and just take the first k corr. points
 
-import math
+from math import sqrt
 
 #k_nearest_neighbors
 #Finds the k nearest points to a center point from a domain list
@@ -21,7 +21,7 @@ def k_nearest_neighbors(points=list([]),center=tuple([]),k=0):
     #compute_distance
     #helper function to compute the distance of a point from the center
     def compute_distance(point=tuple([])):
-        return math.sqrt((center[0] - point[0])**2 + (center[1] - point[1])**2)
+        return sqrt((center[0] - point[0])**2 + (center[1] - point[1])**2)
 
     distances = list([])
     lookup = dict([])
