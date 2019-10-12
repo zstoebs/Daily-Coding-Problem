@@ -16,3 +16,5 @@ numbers with its corresponding probability.
 - 10/11/2019: Find an efficient algorithm to find the
 smallest distance (measured in number of words)
 between any two given words in a string.
+
+- 10/12/2019: Implement a stack API using only a heap.
