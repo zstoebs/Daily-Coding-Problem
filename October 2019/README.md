@@ -18,3 +18,6 @@ smallest distance (measured in number of words)
 between any two given words in a string.
 
 - 10/12/2019: Implement a stack API using only a heap.
+
+- 10/17/2019: Given a string, return the first recurring character in it,
+or null if there is no recurring character.
