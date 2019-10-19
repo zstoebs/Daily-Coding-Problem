@@ -21,3 +21,5 @@ between any two given words in a string.
 
 - 10/17/2019: Given a string, return the first recurring character in it,
 or null if there is no recurring character.
+
+- 10/18/2019: Given a tree where each edge has a weight, compute the length of the longest path in the tree.
