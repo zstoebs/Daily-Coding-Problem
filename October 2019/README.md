@@ -25,3 +25,6 @@ or null if there is no recurring character.
 - 10/18/2019: Given a tree where each edge has a weight, compute the length of the longest path in the tree.
 
 - 10/19/2019: Given a 32-bit integer, return the number with its bits reversed.
+
+- 10/21/2019: Given an arithmetic expression in Reverse Polish Notation,
+write a program to evaluate it.
