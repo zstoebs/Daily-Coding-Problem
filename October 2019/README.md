@@ -28,3 +28,7 @@ or null if there is no recurring character.
 
 - 10/21/2019: Given an arithmetic expression in Reverse Polish Notation,
 write a program to evaluate it.
+
+- 10/22/2019: You are given an array of length n + 1 whose elements belong to the
+set {1, 2, ..., n}. By the pigeonhole principle, there must be a duplicate.
+Find it in linear time and space.
