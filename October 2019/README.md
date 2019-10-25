@@ -32,3 +32,6 @@ write a program to evaluate it.
 - 10/22/2019: You are given an array of length n + 1 whose elements belong to the
 set {1, 2, ..., n}. By the pigeonhole principle, there must be a duplicate.
 Find it in linear time and space.
+
+- 10/25/2019: Given a list of words, find all pairs of unique indices such that
+the concatenation of the two words is a palindrome.
