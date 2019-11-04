@@ -3,3 +3,6 @@
 
 - 11/3/2019: Determine whether there exists a one-to-one character mapping
 from one string s1 to another s2.
+
+- 11/4/2019: Given a linked list and a positive integer k,
+rotate the list to the right by k places.
