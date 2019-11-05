@@ -29,3 +29,20 @@ print(l2)
 [3, 5, 7, 7]
 [3, 4, 5, 1, 2]
 """
+
+### ADMIN SOLUTION
+def rotate(head, k):
+    fast, slow = head, head
+
+    for _ in range(k):
+        fast = fast.next
+
+    while fast.next is not None:
+        slow = slow.next
+        fast = fast.next
+
+    new_head = slow.next
+    fast.next = head
+    slow.next = None
+
+    return new_head
