@@ -9,3 +9,9 @@ rotate the list to the right by k places.
 
 - 11/5/2019: Which of the two games should Alice elect to play? Does it even matter?
 Write a program to simulate the two games and calculate their expected value.
+
+- 11/11/2019: Given n numbers, find the greatest common denominator between them.
+
+- 11/13/2019: Given an array of positive integers, divide the array into
+two subsets such that the difference between the sum of the subsets
+is as small as possible.
