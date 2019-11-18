@@ -15,3 +15,9 @@ Write a program to simulate the two games and calculate their expected value.
 - 11/13/2019: Given an array of positive integers, divide the array into
 two subsets such that the difference between the sum of the subsets
 is as small as possible.
+
+- 11/17/2019: Given a circular array, compute its maximum subarray sum in O(n) time.
+A subarray can be empty, and in this case the sum is 0.
+
+- 11/18/2019: Given a collection of intervals, find the minimum number of intervals
+you need to remove to make the rest of the intervals non-overlapping.
