@@ -21,3 +21,8 @@ A subarray can be empty, and in this case the sum is 0.
 
 - 11/18/2019: Given a collection of intervals, find the minimum number of intervals
 you need to remove to make the rest of the intervals non-overlapping.
+
+- 11/19/2019: You are given an array of nonnegative integers. Let's say you start
+at the beginning of the array and are trying to advance to the end. You can advance
+at most, the number of steps that you're currently on. Determine whether you can get
+to the end of the array.
