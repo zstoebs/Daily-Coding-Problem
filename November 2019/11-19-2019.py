@@ -48,3 +48,12 @@ t2 = [1, 2, 1, 0, 0]
 print(hopscotch(t2)) #False
 t3 = [5,0,0]
 print(hopscotch(t3))
+
+### ADMIN SOLUTION
+def can_reach_end(arr):
+    furthest_so_far = 0
+    for i in range(len(arr)):
+        if i > furthest_so_far:
+            break
+        furthest_so_far = max(furthest_so_far, i + arr[i])
+    return furthest_so_far >= len(arr) - 1

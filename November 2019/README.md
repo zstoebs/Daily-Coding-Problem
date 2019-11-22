@@ -26,3 +26,7 @@ you need to remove to make the rest of the intervals non-overlapping.
 at the beginning of the array and are trying to advance to the end. You can advance
 at most, the number of steps that you're currently on. Determine whether you can get
 to the end of the array.
+
+- 11/22/2019: Let A be an N by M matrix in which every row and every column is sorted.
+Given i1, j1, i2, and j2, compute the number of elements of M smaller than
+M[i1, j1] and larger than M[i2, j2].
