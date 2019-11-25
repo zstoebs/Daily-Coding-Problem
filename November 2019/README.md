@@ -30,3 +30,7 @@ to the end of the array.
 - 11/22/2019: Let A be an N by M matrix in which every row and every column is sorted.
 Given i1, j1, i2, and j2, compute the number of elements of M smaller than
 M[i1, j1] and larger than M[i2, j2].
+
+- 11/25/2019: Given a set of distinct positive integers, find the largest
+subset such that every pair of elements in the subset (i, j) satisfies
+either i % j = 0 or j % i = 0.
