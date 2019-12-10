@@ -56,11 +56,11 @@ def convert_number_to_alphabase(number):
 
 ### TESTS
 num = 1
-print(convert_number_to_alphabase(num))
+print(convert_number_to_alphabase(num)) # A
 num = 27
-print(convert_number_to_alphabase(num))
+print(convert_number_to_alphabase(num)) # A
 num = 52
-print(convert_number_to_alphabase(num))
+print(convert_number_to_alphabase(num)) # BZ --> incorrect should be AZ
 
 ### ADMIN SOLUTION
 def encode(n):
