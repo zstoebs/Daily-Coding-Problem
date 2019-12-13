@@ -8,3 +8,5 @@ valid IP address combinations.
 
 - 12/11/2019: Given an integer n, return the length of the longest consecutive
 run of 1s in its binary representation.
+
+- 12/12/2019: Given the root to a binary tree, return its bottom view.
