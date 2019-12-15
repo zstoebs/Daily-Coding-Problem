@@ -1,0 +1,19 @@
+@author Zach Stoebner
+@date 12-15-2019
+@descrip Write an algorithm that computes the reversal of a directed graph.
+For example, if a graph consists of A -> B -> C, it should become A <- B <- C.
+
+A common way to compute the graph transpose is to perform a modified DFS and just flip each edge as
+it's traversed. It's useful for finding the SCCs of a digraph:
+1. DFS and add to stack
+2. Compute the transpose with another DFS
+3. DFS on the transpose graph in the order of popping off of the stack
+
+Assuming an adj list representation for the graph:
+
+Mark each vertex as unvisited and instantiate a list of the vertices (no edges added yet)
+Starting at vertex v_0, execute DFS:
+  1. Add each unvisited child to a stack
+    and, on the list of vertices, add an edge from each child to the parent
+  2. Pop the top off of the stack and visit that vertex
+  3. Repeat the previous steps
