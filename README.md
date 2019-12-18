@@ -7,7 +7,7 @@ Most of my solutions are in Python for readability, although occasionally I'll s
 
 This repo is publicly available and you can use it how you see fit.
 
-- Clone
+- Clone:  
 ```git clone https://github.com/zstoebs/Daily-Coding-Problem.git```
 
 [GitHub repo URL](https://github.com/zstoebs/Daily-Coding-Problem.git)  
