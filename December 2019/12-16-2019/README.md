@@ -17,4 +17,4 @@ Potential updates include (prioritized order):
 From the command line:
 1. Navigate to the directory
 2. Input command: `python 12-16-2019.py`
-3. Choose from the playable columns or type **-1** to quit
+3. Choose from the playable columns or type *-1* to quit

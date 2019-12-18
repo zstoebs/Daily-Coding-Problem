@@ -19,3 +19,5 @@ smallest sparse number greater than or equal to N.
 Do this in faster than O(N log N) time.
 
 - 12/15/2019: Write an algorithm that computes the reversal of a directed graph.
+
+- 12/16/2019: Design and implement Connect 4.
