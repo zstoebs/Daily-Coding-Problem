@@ -23,3 +23,6 @@ Do this in faster than O(N log N) time.
 - 12/16/2019: Design and implement Connect 4.
 
 - 12/18/2019: Create an algorithm to find the nth sevenish number.
+
+- 12/19/2019: Given an absolute pathname that may have . or .. as part of it,
+return the shortest standardized path.
