@@ -26,3 +26,6 @@ Do this in faster than O(N log N) time.
 
 - 12/19/2019: Given an absolute pathname that may have . or .. as part of it,
 return the shortest standardized path.
+
+- 12/21/2019: Given a sorted array, find the smallest positive integer that is not the sum of a
+subset of the array.
