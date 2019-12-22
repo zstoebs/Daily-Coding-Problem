@@ -29,3 +29,6 @@ return the shortest standardized path.
 
 - 12/21/2019: Given a sorted array, find the smallest positive integer that is not the sum of a
 subset of the array.
+
+- 12/22/2019: Given N and k, write an algorithm to determine where a prisoner should stand in order to
+be the last survivor.

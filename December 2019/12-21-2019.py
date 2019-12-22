@@ -89,3 +89,13 @@ print(consec_sum([1, 2, 3, 7,10,14]))
 24
 38
 """
+
+### ADMIN SOLUTION
+def smallest_impossible_sum(nums):
+    impossible_sum = 1
+    for n in nums:
+        if n <= impossible_sum:
+            impossible_sum += n
+        else:
+            break
+    return impossible_sum
