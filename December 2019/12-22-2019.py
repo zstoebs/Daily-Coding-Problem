@@ -47,3 +47,27 @@ def last_survivor(N,k):
 
 ###TESTS
 print(last_survivor(5,2)) #5
+
+###ADMIN SOLUTION
+#Complexity: O(N)
+def helper(n, k):
+    if n == 0:
+        return 0
+    else:
+        return (helper(n - 1, k) + k) % n
+
+def last_one_standing(n, k):
+    people = range(1, n + 1)
+    return people[helper(n, k)]
+
+print(last_one_standing(5,2)) #3
+
+
+#Complexity: O(logN)
+def last_one_standing1(n):
+    if n == 1:
+        return 1
+    if n % 2 == 0:
+        return 2 * last_one_standing1(n / 2) - 1
+    else:
+        return 2 * last_one_standing1(n / 2) + 1

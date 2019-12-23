@@ -32,3 +32,6 @@ subset of the array.
 
 - 12/22/2019: Given N and k, write an algorithm to determine where a prisoner should stand in order to
 be the last survivor.
+
+- 12/23/2019: You come across a dictionary of sorted words in a language you've never seen before.
+Write a program that returns the correct order of letters in this language.
