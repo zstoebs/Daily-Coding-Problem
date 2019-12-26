@@ -35,3 +35,6 @@ be the last survivor.
 
 - 12/23/2019: You come across a dictionary of sorted words in a language you've never seen before.
 Write a program that returns the correct order of letters in this language.
+
+- 12/25/2019: Given a list of numbers, create an algorithm that arranges them in order to
+form the largest possible integer.

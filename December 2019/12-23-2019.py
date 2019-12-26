@@ -10,8 +10,9 @@ For example, given ['xww', 'wxyz', 'wxyw', 'ywx', 'ywz'], you should return ['x'
 """
 This problem seems ill-formed. What happens when one word is really long with letters that
 don't appear in any other word after some index, or if each word has a separate set of letters unseen
-elsewhere? The wording of the problem assumes a lot about the dictionary. If there are
-letters that are unorderable, then I could partition them into a separate set and return that as well.
+elsewhere? The wording of the problem assumes a lot about the dictionary, particularly that it is complete.
+If there are letters that are unorderable, then I could partition them into a separate set
+and return that as well.
 """
 
 # alpha_order
@@ -83,3 +84,48 @@ def alpha_order(dc=dict()):
 
 ### TESTS
 print(alpha_order(['xww', 'wxyz', 'wxyw', 'ywx', 'ywz'])) #['x', 'z', 'w', 'y']
+
+### ADMIN SOLUTION
+# They solve the language with a topological sort. It doesn't handle the criteria mentioned above.
+def create_graph(words):
+    letters = set(''.join(words))
+    graph = {letter: [] for letter in letters}
+
+    for pair in zip(words, words[1:]):
+        for before, after in zip(*pair):
+            if before != after:
+                graph[before].append(after)
+                break
+
+    return graph
+
+from collections import deque
+
+def visit(letter, graph, visited, order):
+    visited.add(letter)
+
+    for next_letter in graph[letter]:
+        if next_letter not in visited:
+            visit(next_letter, graph, visited, order)
+
+    order.appendleft(letter)
+
+def toposort(graph):
+    visited = set()
+    order = deque([])
+
+    for letter in graph:
+        if letter not in visited:
+            visit(letter, graph, visited, order)
+
+    return list(order)
+
+def alien_letter_order(words):
+    graph = create_graph(words)
+    return toposort(graph)
+
+### TEST
+t1 = ['xww', 'wxyz', 'wxyw', 'ywx', 'ywz']
+t2 = ['xww', 'wxyz', 'wxyw', 'ywxqrt', 'yawz']
+print(alien_letter_order(t1)) # ['x', 'z', 'w', 'y']
+print(alien_letter_order(t2)) # ['z', 'q', 'r', 'x', 'w', 'a', 'y', 't'] <-- doesn't handle incomparable letters
