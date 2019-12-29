@@ -38,3 +38,6 @@ Write a program that returns the correct order of letters in this language.
 
 - 12/25/2019: Given a list of numbers, create an algorithm that arranges them in order to
 form the largest possible integer.
+
+- 12/28/2019: Given a string with repeated characters, rearrange the string so that no two
+adjacent characters are the same. If this is not possible, return None.
