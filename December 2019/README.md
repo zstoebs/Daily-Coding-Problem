@@ -50,3 +50,5 @@ sum(prefix: str): Return the sum of all values of keys that begin with a given p
 
 - 12/30/2019: Implement the function fib(n), which returns the nth number in the
 Fibonacci sequence, using only O(1) space.
+
+- 12/31/2019: Given an undirected graph with weighted edges, compute the maximum weight spanning tree.

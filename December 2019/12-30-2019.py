@@ -8,7 +8,7 @@ Fibonacci sequence, using only O(1) space.
 # fib
 # Returns the nth fibonacci number using O(1) space
 # Complexity: O(n) time, O(1) space
-def fib(n):
+def fib(n: int):
 
     # uses 3 local variables regardless of n
     prev = 1
@@ -50,3 +50,14 @@ for i in range(20):
 4181
 6765
 """
+
+### ADMIN SOLUTION
+"""
+O(1) time and space solution that uses the closed form solution to the fib sequence.
+"""
+from math import sqrt
+
+PHI = (1 + sqrt(5)) / 2
+
+def fib(n: int):
+    return int(PHI ** n / sqrt(5) + 0.5)
