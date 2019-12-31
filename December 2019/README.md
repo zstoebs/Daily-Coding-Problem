@@ -47,3 +47,6 @@ adjacent characters are the same. If this is not possible, return None.
 insert(key: str, value: int): Set a given key's value in the map. If the key already exists,
 overwrite the value.
 sum(prefix: str): Return the sum of all values of keys that begin with a given prefix.
+
+- 12/30/2019: Implement the function fib(n), which returns the nth number in the
+Fibonacci sequence, using only O(1) space.
