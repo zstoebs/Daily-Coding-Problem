@@ -44,3 +44,15 @@ def quick_max_min(arr: list):
 ### TESTS
 t1 = [3,4,0,-1,9,2,17]
 print(quick_max_min(t1)) # (-1, 17)
+
+### ADMIN SOLUTION
+def min_and_max(arr):
+    if len(arr) == 1:
+        return arr[0], arr[0]
+    elif len(arr) == 2:
+        return (arr[0], arr[1]) if arr[0] < arr[1] else (arr[1], arr[0])
+    else:
+        n = len(arr) // 2
+        lmin, lmax = min_and_max(arr[:n])
+        rmin, rmax = min_and_max(arr[n:])
+        return min(lmin, rmin), max(lmax, rmax) 
