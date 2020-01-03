@@ -60,7 +60,7 @@ def inside_polygon(points: list, p: tuple):
         high = max([point,next_point],key=lambda x: x[0])
         edge_lines.append(tuple([slope_next,y_inter,low,high]))
 
-    # checking if point falls within height and width
+    # checking if point falls within height and width of entire polygon
     x = p[0]
     y = p[1]
     if not (x > min_x and x < max_x and y > min_y and y < max_y):
@@ -75,5 +75,8 @@ def inside_polygon(points: list, p: tuple):
         rel_x = (y - inter) / slope
         if rel_x > x and y > low and y < high:
             count += 1
+        # if it sits on an edge
+        if rel_x == x:
+            return False
 
     return count % 2 != 0
