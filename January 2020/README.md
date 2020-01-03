@@ -5,4 +5,6 @@
 less than 2 * (N - 2) comparisons.
 
 - 1/2/2020: Determine if a new point p lies inside this polygon. (If p is on the boundary of the
-polygon, you should return False). 
+polygon, you should return False).
+
+- 1/3/2020: Given a k-ary tree, determine whether it is symmetric.
