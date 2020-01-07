@@ -10,3 +10,5 @@ polygon, you should return False).
 - 1/3/2020: Given a k-ary tree, determine whether it is symmetric.
 
 - 1/5/2020: Find the total number of valid unlock patterns of length N, where 1 <= N <= 9.
+
+- 1/7/2020: Given a list of paper citations of a researcher, calculate their h-index.
