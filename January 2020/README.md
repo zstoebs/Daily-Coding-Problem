@@ -12,3 +12,6 @@ polygon, you should return False).
 - 1/5/2020: Find the total number of valid unlock patterns of length N, where 1 <= N <= 9.
 
 - 1/7/2020: Given a list of paper citations of a researcher, calculate their h-index.
+
+- 1/9/2020: Given an array of numbers N and an integer k, your task is to split N into k partitions
+such that the maximum sum of any partition is minimized. Return this sum.
