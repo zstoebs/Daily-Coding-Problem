@@ -15,3 +15,5 @@ polygon, you should return False).
 
 - 1/9/2020: Given an array of numbers N and an integer k, your task is to split N into k partitions
 such that the maximum sum of any partition is minimized. Return this sum.
+
+- 1/18/2020: Create an algorithm to turn an ordinary fraction a / b, where a < b, into an Egyptian fraction.
