@@ -59,3 +59,45 @@ def playlist(lsts: list):
 
 ### TESTS\
 print(playlist([[1, 7, 3], [2, 1, 6, 7, 9], [3, 9, 5]]))
+
+### ADMIN SOLUTION
+from collections import defaultdict, deque
+
+def interleave(preferences):
+    songs = set([song for user in preferences for song in user])
+
+    prev_to_next = defaultdict(list)
+    prev_count = defaultdict(int)
+
+    # Create a map from each song to songs that come directly after in the input.
+    for song_list in preferences:
+        for before, after in zip(song_list, song_list[1:]):
+            prev_to_next[before].append(after)
+
+    # Keep track of how many predecessors each song has.
+    for next_songs in prev_to_next.values():
+        for song in next_songs:
+            prev_count[song] += 1
+
+    queue = deque()
+    result = []
+
+    # Initialize a queue to represent the playlist, starting with songs without predecessors.
+    for song in songs:
+        if song not in prev_count:
+            queue.append(song)
+            result.append(song)
+
+    # Pop elements one at a time and get their successors.
+    # If a successor has no other predecessors, add it to the result.
+    while queue:
+        song = queue.popleft()
+        successors = prev_to_next[song]
+
+        for next_song in successors:
+            prev_count[next_song] -= 1
+            if prev_count[next_song] == 0:
+                queue.append(next_song)
+                result.append(next_song)
+
+    return result

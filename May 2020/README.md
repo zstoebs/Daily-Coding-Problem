@@ -5,3 +5,5 @@
 
 - 5-5-2020: Given a set of these ranked lists, interleave them to create a playlist that satisfies
 everyone's priorities.
+
+- 5-7-2020: Create a program that finds all strobogrammatic numbers with N digits.
