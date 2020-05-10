@@ -7,3 +7,5 @@
 everyone's priorities.
 
 - 5-7-2020: Create a program that finds all strobogrammatic numbers with N digits.
+
+- 5-10-2020: Implement a quack using three stacks and O(1) additional memory, so that the amortized time for any push, pop, or pull operation is O(1).
