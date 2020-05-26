@@ -15,3 +15,5 @@ with the following functions: add(), update(), remove(), which adds/updates/remo
 datapoint for the stock price you are tracking. The data is given as (timestamp, price),
 where timestamp is specified in unix epoch time. Also, provide max(), min(), and average() functions that give the max/min/average of all
 values seen thus far.
+
+- 5-26-2020: Implement a function that converts a hex string to base64.
