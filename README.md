@@ -17,5 +17,6 @@ This repo is publicly available and you can use it how you see fit.
 ## Interesting Problems
 - [Connect4](https://github.com/zstoebs/Daily-Coding-Problem/tree/master/December%202019/12-16-2019)
 - [Fixed-Array Queue](https://github.com/zstoebs/Daily-Coding-Problem/tree/master/May%202020/5-1-2020)
+- [Stock-Tracker API](https://github.com/zstoebs/Daily-Coding-Problem/blob/master/May%202020/5-14-2020.py)
 
 Best! ~ Zach
