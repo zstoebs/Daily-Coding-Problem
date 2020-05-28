@@ -34,12 +34,12 @@ def hex2base64(string: str):
     0b001111:'P',0b011111:'f',0b101111:'v',0b111111:'/'}
 
     alpha16 = {'0':0,'1':1,'2':2,'3':3,'4':4,'5':5,'6':6,'7':7,'8':8,'9':9,'a':10,'A':10,
-    'b':11,'B':11,'c':12,'C':12,'d':13,'D':13,'e':14,'E':14,'f':15,'F15'}
+    'b':11,'B':11,'c':12,'C':12,'d':13,'D':13,'e':14,'E':14,'f':15,'F':15}
 
     num = 0
-    n = len(str)
-    for i,c in enumerate(str):
-        num += alpha16[c]*(16**(n-i-1))
+    n = len(string)
+    for i,c in enumerate(string):
+        num += alpha16[c]*(16**(n-i))
 
     mod = 0
     div = 0
@@ -48,11 +48,11 @@ def hex2base64(string: str):
         mod = num % 64
         div = num // 64
 
-        new_str += alpha64[mod]
+        new_str = alpha64[mod] + new_str
 
         num = div
 
-    pad = new_str % 4
+    pad = len(new_str) % 4
     if pad != 0:
         new_str += (4-pad)*'='
 
@@ -60,4 +60,44 @@ def hex2base64(string: str):
 
 ### TESTS
 print(hex2base64("deadbeef"))
-print(base64.b64encode("deadbeef"))
+#print(base64.b64encode("deadbeef"))
+
+### ADMIN SOLUTION
+def sextet_to_char(sextet):
+    i = int(sextet, 2)
+    if 0 <= i <= 25:
+        return chr(i + 65)
+    elif 26 <= i <= 51:
+        return chr(i + 71)
+    elif 52 <= i <= 61:
+        return str(i - 52)
+    elif i == 62:
+        return '+'
+    elif i == 63:
+        return '/'
+    else:
+        raise Exception('Invalid sextet.')
+
+
+def convert_hex_to_base64(s):
+    b = bytearray.fromhex(s)
+
+    # Convert to bit string.
+    bit_string = ''
+    for c in b:
+        bit_string += bin(c)[2:].zfill(8)
+
+    # Calculate padding and pad rest of string with 0s.
+    padding = 6 - len(bit_string) % 6
+    bit_string += '0' * padding
+
+    # Break down bit string into sextets and convert to base64 chars.
+    result = ''
+    for i in range(0, len(bit_string), 6):
+        sextet = bit_string[i:i + 6]
+        result += sextet_to_char(sextet)
+
+    # Add equal sign padding
+    result += '=' * (padding / 2)
+
+    return result

@@ -17,3 +17,6 @@ where timestamp is specified in unix epoch time. Also, provide max(), min(), and
 values seen thus far.
 
 - 5-26-2020: Implement a function that converts a hex string to base64.
+
+- 5-28-2020: Implement the function embolden(s, lst) which takes in a string s and list of
+substrings lst, and wraps all substrings in s with an HTML bold tag <b> and </b>.
